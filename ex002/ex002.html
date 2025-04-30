@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{
+            background-color: black;
+            color: white;
+        }
+        h1{
+            
+            font-size: 40px;
+            font: white;
+        }
+    </style>
+    <title>Meu Primeiro Programa em JavaScript</title>
+</head>
+<body>
+  <h1>Olá, mundo</h1>
+  <script>
+
+    window.alert('Meg é Demais')
+    window.confirm('sim ou com certeza')
+    
+    var nome = window.prompt('quem é tu?')
+    window.alert('Que bom te ver ' + nome + ' :)')
+
+    var n1 = Number (window.prompt('Digite um número'))
+    var n2 = Number (window.prompt('Digite outro número'))
+    var n3 = n1+n2 
+    window.alert(n3)
+
+    var nome = window.prompt('Qual seu nome?')
+    document.write(`Olá, ${nome}! Seu nome tem ${nome.length} letras`)
+ 
+    
+  </script>
+</body>
+</html>

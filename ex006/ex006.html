@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+    <style>
+      div#batata{
+        background-color: rgb(78, 139, 119);
+        width: 200px;
+        height: 200px;
+        font-size: 30px;
+        text-align: center;
+        line-height: 180px;
+      }  
+    </style>
+</head>
+<body>
+    <div id="batata" onclick="clicar()" onmouseenter="entrar()" onmousemove="moveu()">
+Interaja :3
+
+    </div>
+
+    <script>
+        function clicar(){
+            var b = document.getElementById('batata')
+            b.innerHTML = 'clicou:3'
+
+        }
+
+        function entrar(){
+            var b = document.getElementById('batata')
+            b.innerHTML = 'passouu :/'
+        }
+
+        function moveu(){
+            var b = document.getElementById('batata')
+            b.innerHTML = 'moveuuu:)'   
+        }    
+    </script>
+</body>
+</html>
