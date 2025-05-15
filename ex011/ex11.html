@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interagindo com o sistema</title>
+    <style>
+        body{
+      
+            font: normal 18px arial;
+        }
+
+        header{ 
+            color: white;
+            text-align: center;
+
+        }
+
+        main{
+            background-color: antiquewhite;
+            padding: 15px;
+            width:500px ;
+            border-radius: 10px;
+            margin: auto;
+            box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.507);
+        }
+
+        footer{
+            color: white;
+            text-align: center;
+        }
+
+        img{
+            border-radius: 50%;
+            width: 250px;
+            height: 250px;
+            margin: auto;
+        }
+
+        div{
+            text-align: center;
+        }
+    </style>
+</head>
+<body onload="carregar()">
+   <header>
+        <h1>Hora do Dia</h1>
+   </header>
+   <main>
+        <div id="men">
+        Aqui vai aparecer uma mensagem....
+        </div>
+        <br>
+        <div id="foto">
+        
+        </div>
+   </main>
+
+   <footer>
+        <p>&copy;<em>Criado por Rebeca Brito</em></p>
+   </footer>
+
+<script>
+function carregar() {
+    var msg = document.getElementById('men')
+    var foto = document.getElementById('foto')
+    var data = new Date()
+     var hora = data.getHours()
+     var min = data.getMinutes()
+     //var hora = 22 
+  
+    msg.innerHTML = `Agora são ${hora} horas e ${min} minutos.`
+
+    var imagem = document.createElement('img')
+    imagem.alt = 'manha.jpg'
+
+    if (hora >= 0 && hora < 12) {
+        imagem.src = 'manha.jpg'
+        document.body.style.background = '#d6a66e'
+    
+    } else if (hora >= 12 && hora < 18) {
+        imagem.src = 'tarde.jpg'
+        document.body.style.background = '#9e6b38'
+    } else {
+        imagem.src = 'noite.jpg'
+        document.body.style.background = '#476cb1'
+    }
+
+    foto.innerHTML = ''
+    foto.appendChild(imagem)
+}
+</script>
+
+</body>
+</html>

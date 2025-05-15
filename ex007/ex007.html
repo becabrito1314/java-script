@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somando números</title>
+    <style>
+        body{
+            font-size: 19px;
+            background-color: rgb(19, 16, 16);
+            color: white;
+        }
+        input{
+            font-size: 18px;
+
+        }
+
+        div{
+            font-size: 22px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Somando valores</h1>
+    <input type="number" name="numero1" id="numero1">+
+    <input type="number" name="numero2" id="numero2">
+    <input type="button" value="Somar" onclick="Somar()">
+    <div id="recupe">Resultado</div>
+
+    <h1>Dividindo valores</h1>
+    <input type="number" name="num1" id="num1">
+    <input type="number" name="num2" id="num2">
+    <input type="button" value="Dividir" onclick="Dividir()">
+    <div id="res">Resultado</div>
+
+<script>
+    
+    function Somar(){
+        var n1 = document.getElementById('numero1')
+        var n2 = document.getElementById('numero2')
+        var r = document.getElementById('recupe')
+        var n3 = Number(n1.value)
+        var n4 = Number(n2.value)
+        var m = n3 + n4
+        r.innerHTML = `a soma entre ${n3} e ${n4} é igual a ${m}`
+    }
+
+    function Dividir(){
+        var nu1 = document.getElementById('num1')
+        var nu2 = document.getElementById('num2')
+        var res = document.getElementById('res')
+        var nu3 = Number(nu1.value)
+        var nu4 = Number(nu2.value)
+        var n0 = nu3 / nu4
+        res.innerHTML = `a divisão de ${nu3} e ${nu4} é ${n0}`
+        }
+</script>
+</body>
+</html>
