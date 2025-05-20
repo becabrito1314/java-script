@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio</title>
+    <style>
+        main{
+            text-align: center;
+            background-color: antiquewhite;
+            font: 30px ;
+            border-radius: 10px;
+            width: 500px;
+            height: 500px;
+            margin: auto;
+            box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.432);
+
+        }
+        body{
+            background-color: rgb(145, 108, 108);
+        }
+
+        #res{
+            font-size: 30px;
+            background-color: rgb(145, 108, 108);
+            border-radius: 10px;
+
+        }
+
+    </style>
+</head>
+<body>
+    <div>
+    <main>
+        <br>
+        <h1>Escreva o seu número escolhido aqui </h1>
+        <input type="number" name="num" id="num">
+        <br><br><br>
+        <input type="button" value="Verifique" onclick="Separar()">
+        <h2>Verifique se é ímpar ou par</h2>
+        <br>
+         <div id="res">
+
+    </div>
+
+
+
+    </main>
+       
+    </div>
+   
+
+    <script>
+   function Separar(){
+//criei as constantes
+
+    const input = document.getElementById('num')
+    const valor = Number(input.value) 
+
+//verifica se o espaço nao ta vazio
+
+    if(input.value === ""){
+        alert('Algo deu errado, verifique e tente novamente');
+        return;
+    }
+
+    let res = document.getElementById('res')
+
+   if(valor % 2 === 0){
+      res.textContent = `✅ O número ${valor} é PAR.`;
+   } else {
+     res.textContent = `🔴 O número ${valor} é ÍMPAR.`;
+   }
+}
+   </script>
+</body>
+</html>
